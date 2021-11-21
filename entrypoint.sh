@@ -33,7 +33,7 @@ main() {
 
   set +e
     echo "==> TRYING TO GENERATE THE DOCUMENT"
-    xelatex -file-line-error -halt-on-error  -interaction=nonstopmode $INPUT_FILE_NAME
+    pdflatex $INPUT_FILE_NAME
     if [ ! $? -eq 0 ]; then
       echo "ERROR : ❌ > THE PDF DOCUMENT CAN'T BE GENERATED‼️"
       exit 1
