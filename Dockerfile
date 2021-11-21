@@ -8,5 +8,5 @@ RUN apt-get update -q && apt-get install -qy \
     make git \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /data
-VOLUME ["/data"]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
