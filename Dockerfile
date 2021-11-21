@@ -9,5 +9,5 @@ RUN \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
-ADD entrypoint.sh entrypoint.sh
-ENTRYPOINT ["bash entrypoint.sh"]
+ADD entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["/entrypoint.sh"]
