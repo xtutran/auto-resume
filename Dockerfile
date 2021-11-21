@@ -1,12 +1,13 @@
-FROM ubuntu:xenial
-ENV DEBIAN_FRONTEND noninteractive
+FROM thomasweise/docker-texlive-thin
 
-RUN apt-get update -q && apt-get install -qy \
-    curl jq \
-    texlive-full \
-    python-pygments gnuplot \
-    make git \
-    && rm -rf /var/lib/apt/lists/*
+RUN \
+    echo "===> Update repositories" && \
+    apt-get update && \
+    echo "===> Install jq and curl" && \
+    apt-get install -y curl jq && \
+    echo "===> Clean up" && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ADD entrypoint.sh entrypoint.sh
+ENTRYPOINT ["bash entrypoint.sh"]
