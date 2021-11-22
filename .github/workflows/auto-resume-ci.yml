@@ -1,11 +1,12 @@
 name: Public-Resume-CI
 
-on: [push]
-  paths:
-      - 'resume/**'
-      - 'tran-xuantu.tex'
-    branches:
-      - main
+on: 
+  push:
+    paths:
+        - 'resume/**'
+        - 'tran-xuantu.tex'
+      branches:
+        - main
 
 jobs:
   auto-resume-job:
