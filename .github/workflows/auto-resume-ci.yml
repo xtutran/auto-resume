@@ -3,8 +3,8 @@ name: Public-Resume-CI
 on: 
   push:
     paths:
-        - 'resume/**'
-        - 'tran-xuantu.tex'
+      - 'resume/**'
+      - 'tran-xuantu.tex'
     branches:
       - main
 
