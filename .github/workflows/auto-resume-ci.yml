@@ -5,8 +5,8 @@ on:
     paths:
         - 'resume/**'
         - 'tran-xuantu.tex'
-      branches:
-        - main
+    branches:
+      - main
 
 jobs:
   auto-resume-job:
