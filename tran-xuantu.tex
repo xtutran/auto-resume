@@ -5,7 +5,7 @@
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -95,9 +95,23 @@
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
   \textbf{\href{https://xtutran.github.io/}{TRAN Xuan Tu}} & Email : \href{mailto:xtutran@gmail.com}{xtutran@gmail.com}\\
-  \href{https://xtutran.github.io/}{https://xtutran.github.io/} & Mobile : +65-9450-8835 \\
+  \href{https://xtutran.github.io/}{https://xtutran.github.io/} & Github : \href{https://github.com/xtutran}{https://github.com/xtutran} \\
 \end{tabular*}
 
+\cfoot{\tiny https://github.com/xtutran/public-resume}
+% \renewcommand{\footrulewidth}{0.2pt}
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/education.tex}
+\input{resume/experience.tex}
+\input{resume/honors.tex}
+\input{resume/publications.tex}
+\input{resume/skills.tex}
+\input{resume/projects.tex}
 
 %-------------------------------------------
 \end{document}

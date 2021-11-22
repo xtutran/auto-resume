@@ -1,13 +1,18 @@
-name: Auto-Resume-CI
+name: Public-Resume-CI
 
 on: [push]
+  paths:
+      - 'resume/**'
+      - 'tran-xuantu.tex'
+    branches:
+      - main
 
 jobs:
   auto-resume-job:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - uses: xtutran/auto-resume@main
+    - uses: xtutran/public-resume@main
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:

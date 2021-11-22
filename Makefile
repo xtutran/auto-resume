@@ -1,4 +1,2 @@
 build:
-	docker build -t my-latex .
-local:
-	docker run --rm -i -v .:/data my-latex pdflatex tran-xuantu.tex
+	docker run --rm  --name latex -v `PWD`:/doc/ -it thomasweise/texlive pdflatex -interaction nonstopmode tran-xuantu.tex

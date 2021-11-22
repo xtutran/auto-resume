@@ -1,9 +1,9 @@
-name: 'Awesome CV Builder'
+name: 'Public Resume Builder'
 author: 'Tran Xuan Tu'
 branding:
   icon: 'file-plus'
   color: 'orange'
-description: 'Automate your Awesome CV resume and keep it up to date.'
+description: 'Automate your Public Resume and keep it up to date.'
 inputs:
   FILE_NAME:
     description: 'The filename of your latex document within your repository (Ex: resume.tex)'
