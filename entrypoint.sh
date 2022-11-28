@@ -51,7 +51,7 @@ main() {
   fi
 
    echo "::set-output name=TAG_NAME::${TAG_NAME}" 
-
+  # echo "TAG_NAME=${TAG_NAME}" >> $GITHUB_OUTPUT
 }
 
 cleanLatest() {
