@@ -3,6 +3,7 @@ name: Public-Resume-CI
 on: 
   push:
     paths:
+      - '.github/**'
       - 'resume/**'
       - 'tran-xuantu.tex'
     branches:
