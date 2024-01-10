@@ -2,9 +2,9 @@ FROM thomasweise/docker-texlive-thin
 
 RUN \
     echo "===> Update repositories" && \
-    apt-get update && \
+    sudo apt-get update && \
     echo "===> Install jq and curl" && \
-    apt-get install -y curl jq && \
+    apt-get install -y --no-install-recommends curl jq && \
     echo "===> Clean up" && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
