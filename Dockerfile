@@ -1,12 +1,8 @@
-FROM thomasweise/docker-texlive-thin
+FROM thomasweise/texlive
 
-RUN \
-    echo "===> Update repositories" && \
-    sudo apt-get update && \
-    echo "===> Install jq and curl" && \
-    sudo apt-get install -y --no-install-recommends curl jq && \
-    echo "===> Clean up" && \
-    sudo apt-get clean && \
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends curl jq && \
+    apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
 ADD entrypoint.sh /entrypoint.sh
