@@ -1,9 +1,6 @@
 FROM thomasweise/docker-texlive-thin
 
-RUN \
-    echo "===> Update repositories" && \
-    apt-get update && \
-    echo "===> Install jq and curl" && \
+RUN echo "===> Install jq and curl" && \
     apt-get install -y curl jq && \
     echo "===> Clean up" && \
     apt-get clean && \
